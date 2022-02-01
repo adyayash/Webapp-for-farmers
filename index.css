@@ -1,0 +1,70 @@
+::placeholder{
+    color: black;
+    text-align: center;
+}
+input{
+    border-radius: 13px;
+}
+body{
+    background-image:url(Bgimage.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.class_1{
+    position: absolute;
+    opacity: 0.5;
+    left: 10%;
+    top: 50%;
+    transform: translate(0,-50%);
+    background-color: black;
+    width: 600;
+    height: auto;
+    color: white; 
+    padding: 10px;
+}
+.class_2 p{
+    margin-left: 150px;
+}
+.class_2 h1{
+    text-align: center;
+}
+.class_2 input{
+    width: 300px;
+    padding: 5px;
+}
+.class_3 {
+    font-size: larger;
+    margin-left:150px ;
+}
+.login{
+    background-color: rgb(20, 230, 13);
+    padding: 5px;
+    margin-left:220px ;
+    width: 150px;
+}
+.ak{
+    margin-left: auto;
+    margin-right: 0;
+    height: 100%;
+    width: 450px;
+    background-color: rgb(255, 234, 113);
+    opacity: 0.8;
+    color: white;
+}
+.ak h1{
+   padding-top: 45%;
+   margin-left: 160px;
+   color: black;
+}
+.ak p{
+    color: black;
+    padding-left: 50px;
+}
+.signup{
+    color: black;
+    background-color:rgb(255, 255, 255);
+    padding: 5px;
+    margin-top: 20px;
+    margin-left:160px ;
+    width: 150px;
+    }
