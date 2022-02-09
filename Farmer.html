@@ -1,0 +1,190 @@
+<html><head><title>farmer</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" initial-scale="1.0">
+    <link rel="stylesheet" href="contentstyle.css">
+    <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+    </head>
+    <body>
+        <div class="image">
+            <img src="Bgimage2.jpg" alt="mine" width="100%" height="100%">
+        </div>
+        <div class="farmly">
+            <h1>FARMLY</h1>
+            <ul class="navbar">
+                <li class="active">BILLS</li>
+                <li>REPORT SHOP</li>
+                <li class="rgo">RATING GOVERNMENT OFFICIAL</li>
+            </ul>
+
+            <div id="bills">
+                <table border="2" class="billtable">
+                <tr>
+                    <th style="width: 140px;">Date</th>
+                    <th style="width: 230px;">Shop Name</th>
+                    <th>Total Amount</th>
+                </tr>
+                <tr>
+                    <td>25/02/21</td>
+                    <td>Ashok Organics</td>
+                    <td>400.00</td>
+                </tr></table>
+                <table border="2" class="billtable" id="nothover" style="display: none;">
+                    <tr>
+                        <th>Item</th>
+                        <th>Quantity</th>
+                        <th>Discount Amount</th>
+                        <th>Net Amount</th>
+                    </tr>
+                    <tr>
+                        <td>1.Urea</td>
+                        <td>2kg</td>
+                        <td>46.00</td>
+                        <td>100.00</td>
+                    </tr>
+                    <tr>
+                        <td>2.Sunflower Seed</td>
+                        <td>850gm</td>
+                        <td>50.00</td>
+                        <td>150.00</td>
+                    </tr>
+                    <tr>
+                        <td>3.Pumpkin Seed</td>
+                        <td>900gm</td>
+                        <td>30.00</td>
+                        <td>150.00</td>
+                    </tr>
+                </table>
+                <table border="2" class="billtable">
+                <tr>
+                    <td style="width: 140px;">11/05/21</td>
+                    <td style="width: 230px;">OP Organics</td>
+                    <td>600.00</td>
+                </tr></table>
+                <table border="2" class="billtable" id="nothover" style="display: none;">
+                    <tr>
+                        <th>Item</th>
+                        <th>Quantity</th>
+                        <th>Discount Amount</th>
+                        <th>Net Amount</th>
+                    </tr>
+                    <tr>
+                        <td>1.Urea</td>
+                        <td>2kg</td>
+                        <td>46.00</td>
+                        <td>100.00</td>
+                    </tr>
+                    <tr>
+                        <td>2.Sunflower Seed</td>
+                        <td>850gm</td>
+                        <td>50.00</td>
+                        <td>150.00</td>
+                    </tr>
+                    <tr>
+                        <td>3.Pumpkin Seed</td>
+                        <td>900gm</td>
+                        <td>30.00</td>
+                        <td>150.00</td>
+                    </tr>
+                </table>
+                <table border="2" class="billtable">
+                <tr>
+                    <td style="width: 140px;">12/09/21</td>
+                    <td style="width: 230px;">Yash Organics</td>
+                    <td>800.00</td>
+                </tr>
+               </table>
+               <table border="2" class="billtable" id="nothover" style="display: none;">
+                <tr>
+                    <th>Item</th>
+                    <th>Quantity</th>
+                    <th>Discount Amount</th>
+                    <th>Net Amount</th>
+                </tr>
+                <tr>
+                    <td>1.Urea</td>
+                    <td>2kg</td>
+                    <td>46.00</td>
+                    <td>100.00</td>
+                </tr>
+                <tr>
+                    <td>2.Sunflower Seed</td>
+                    <td>850gm</td>
+                    <td>50.00</td>
+                    <td>150.00</td>
+                </tr>
+                <tr>
+                    <td>3.Pumpkin Seed</td>
+                    <td>900gm</td>
+                    <td>30.00</td>
+                    <td>150.00</td>
+                </tr>
+            </table></div>
+       <div id="reportshop">
+        <p><label> District :</label></p>
+            <input type="name" name="district"  id="district" placeholder="Enter District"><br>
+            <p> <label></label>Panchayat:</label></p>
+            <input type="name" name="panchayat"  id="panchayat" placeholder="Enter Panchayat">
+        <p><label for="shopname">Shop Name :</label><br>
+            <input type="name" name="shopname" id="shopname" placeholder="Enter Shopname"></p>
+        <p><label for="shopaddress">Shop Address :</label><br>
+            <textarea name="address"  id="shopaddress" cols="38" rows="4" placeholder="Please Enter Shop Address"></textarea>
+        <p><label for="reason">Reason :</label><br>
+            <textarea name="reason"  cols="38" id="reason" rows="4" placeholder="Please Enter Shop Address"></textarea>
+            <p><input type="submit" id="submit" value="Submit Your Report"></p>
+        </div>
+        <div id="rating">
+            <label for="range"><h2 >How do you rate our Service?</h2></label><br>
+            <p ><input type="range" style="width: 300px;" name="range" id="range" min="0" max="5"></p><br>
+            <label for="suggestion"><h2 >What could we do better?</h2></label><br>
+            <textarea name="suggestion"  cols="250" rows="6"></textarea><br><br><br>
+           <input  type="submit" name="submit" value="Submit Your Rating">
+        </div>
+    </div>
+    <script>
+        var bills = document.getElementById('bills')
+        var reportshop = document.getElementById('reportshop')
+        var rating = document.getElementById('rating')
+        var list = document.getElementsByTagName('li')
+    list[1].addEventListener('click',function(){
+        list[1].classList.add('active');
+        list[0].classList.remove('active');
+        list[2].classList.remove('active');
+        reportshop.style.display='block'
+        bills.style.display='none'
+        rating.style.display='none'
+    })
+    list[2].addEventListener('click',function(){
+        list[2].classList.add('active');
+        list[0].classList.remove('active');
+        list[1].classList.remove('active');
+        reportshop.style.display='none'
+        bills.style.display='none'
+        rating.style.display='block'
+    })
+    list[0].addEventListener('click',function(){
+        list[0].classList.add('active');
+        list[1].classList.remove('active');
+        list[2].classList.remove('active');
+        reportshop.style.display='none'
+        bills.style.display='block'
+        rating.style.display='none'
+    })
+    var table = document.getElementsByTagName('table')
+    table[0].addEventListener('click', function(){
+        table[1].style.display='table';
+        table[3].style.display='none';
+        table[5].style.display='none';
+    })
+    table[2].addEventListener('click', function(){
+        table[1].style.display='none';
+        table[3].style.display='table';
+        table[5].style.display='none';
+    })
+    table[4].addEventListener('click', function(){
+        table[1].style.display='none';
+        table[3].style.display='none';
+        table[5].style.display='table';
+    })
+    </script>
+    </body>
+    </html>

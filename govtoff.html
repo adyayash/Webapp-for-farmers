@@ -1,0 +1,71 @@
+<html><head><title>govtoff</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" initial-scale="1.0">
+    <link rel="stylesheet" href="contentstyle.css">
+    <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+    </head>
+    <body>
+        <div class="image">
+            <img src="Bgimage2.jpg" alt="mine" width="100%" height="100%">
+        </div>
+        
+        <div class="farmly">
+            <h1 >FARMLY</h1>
+            <ul class="navbar" style="margin-left: 0;">
+                <li class="active" style="margin-left: 20px;">REPORT LIST</li>
+            </ul>
+            <div id="govtoff"><table border="2">
+                <tr>
+                    <th>Name</th>
+                    <th>Farmer ID</th>
+                    <th>Shop Reported</th>
+                </tr>
+                <tr>
+                    <td>Mariyappan</td>
+                    <td>83637356</td>
+                    <td>Ashok Organic</td>
+                </tr>
+                <tr style="color: brown;display: none;" id="nothover">
+                    <td colspan="3"><span>REASON :</span>  We harvested the seeds bought from this store in which the Sunflower seed is of poor quality 
+                        and did not germinate at all and the urea we bought might be of incorrect NPK ratio which caused crop damage.</td>   
+                </tr>
+                <tr>
+                    <td>Ramesh</td>
+                    <td>775648692</td>
+                    <td>Yash Organic</td>
+                </tr>
+                <tr style="color: brown;display: none;" id="nothover">
+                    <td colspan="3"><span>REASON :</span>  We harvested the seeds bought from this store in which the Sunflower seed is of poor quality 
+                        and did not germinate at all and the urea we bought might be of incorrect NPK ratio which caused crop damage.</td>   
+                </tr>
+                <tr>
+                    <td>Sivaguru</td>
+                    <td>349012347</td>
+                    <td>AK Organic</td>
+                </tr>
+                <tr style="color: brown;display: none;" id="nothover">
+                    <td colspan="3"><span>REASON :</span>  We harvested the seeds bought from this store in which the Sunflower seed is of poor quality 
+                        and did not germinate at all and the urea we bought might be of incorrect NPK ratio which caused crop damage.</td>   
+                </tr>
+            </table></div>
+        </div>   
+    <script>
+        var tr = document.getElementsByTagName('tr')
+        tr[1].addEventListener('click',function(){
+            tr[2].style.display='table-row'
+            tr[4].style.display='none'
+            tr[6].style.display='none'
+        })
+        tr[3].addEventListener('click',function(){
+            tr[2].style.display='none'
+            tr[4].style.display='table-row'
+            tr[6].style.display='none'
+        })
+        tr[5].addEventListener('click',function(){
+            tr[2].style.display='none'
+            tr[4].style.display='none'
+            tr[6].style.display='table-row'
+        })
+        
+    </script> 
+</body></html>

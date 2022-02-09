@@ -1,0 +1,119 @@
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="contentstyle.css">
+    <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+    <style>
+    
+    </style>
+    </head>
+    <body id="header">
+        <div class="image">
+            <img src="Bgimage2.jpg" alt="mine" width="100%" height="100%">
+        </div>
+        
+        <div class="farmly shopkeeper">
+            
+            <h1 >FARMLY</h1>
+           
+                <input type="text" id="sno" placeholder="S.No">
+                <input type="text" id="itemname" placeholder="Item Name">
+                <input type="text" id="qty" placeholder="Qty">
+                <input type="text" id="rate" placeholder="Rate">
+                <button id="add-item">Add New Item</button>
+                <div class="table">
+                    <table border="2" id="todo-list">
+                        <tr>
+                            <th>S.No</th>
+                            <th style="width: 160px;">Item Name</th>
+                            <th style="width: 44px;">Qty</th>
+                            <th style="width: 90px;">Rate</th>
+                        </tr>
+                    </table>
+        <script src="https://kit.fontawesome.com/b8832d0a4a.js" crossorigin="anonymous"></script>
+        <script>
+            var list = document.getElementById('todo-list');
+            var snoinput = document.getElementById('sno')
+            var itemnameinput = document.getElementById('itemname')
+            var qtyinput = document.getElementById('qty')
+            var rateinput = document.getElementById('rate')
+            var addBtn = document.getElementById('add-item')
+            
+            var snoinputvalue = ''
+            snoinput.addEventListener('input', function(e){
+                snoinputvalue=e.target.value
+            });  
+            var itemnameinputvalue = ''
+            itemnameinput.addEventListener('input', function(e){
+                itemnameinputvalue=e.target.value
+            });
+            var qtyinputvalue = ''
+            qtyinput.addEventListener('input', function(e){
+                qtyinputvalue=e.target.value
+            });
+            var rateinputvalue = '' 
+            rateinput.addEventListener('input', function(e){
+                rateinputvalue=e.target.value
+            }); 
+            
+            function addItem(){
+                if(snoinputvalue!=='' && itemnameinputvalue!=='' && qtyinputvalue!=='' && rateinputvalue!==''){
+                var sno = document.createElement('td')
+                var itemname = document.createElement('td')
+                var qty = document.createElement('td')
+                var rate = document.createElement('td')
+                var textNode1 = document.createTextNode(snoinputvalue)
+                var textNode2 = document.createTextNode(itemnameinputvalue)
+                var textNode3 = document.createTextNode(qtyinputvalue)
+                var textNode4 = document.createTextNode(rateinputvalue)
+                sno.appendChild(textNode1)
+                itemname.appendChild(textNode2)
+                qty.appendChild(textNode3)
+                rate.appendChild(textNode4)
+                var icon = document.createElement('i')
+                icon.className ="fas fa-trash"
+                rate.appendChild(icon)
+                icon.addEventListener('click', function(){
+                    sno.remove()
+                    itemname.remove()
+                    qty.remove()
+                    rate.remove()
+                })
+                var tr = document.createElement('tr')
+                tr.appendChild(sno)
+                tr.appendChild(itemname)
+                tr.appendChild(qty)
+                tr.appendChild(rate)
+                list.appendChild(tr)
+                snoinput.value=""
+                itemnameinput.value=""
+                qtyinput.value=""
+                rateinput.value=""
+                snoinputvalue=""
+                itemnameinputvalue=""
+                qtyinputvalue=""
+                rateinputvalue=""
+                }
+                else{
+                    alert('Enter a valid item')
+                }
+            }
+            snoinput.addEventListener('keydown', function(e){
+                if(e.keyCode === 13){ 
+                    itemnameinput.focus() }
+            })
+            itemnameinput.addEventListener('keydown', function(e){
+                if(e.keyCode === 13){ 
+                    qtyinput.focus() }
+            })
+            qtyinput.addEventListener('keydown', function(e){
+                if(e.keyCode === 13){ 
+                    rateinput.focus() }
+            })
+            rateinput.addEventListener('keydown', function(e){
+                if(e.keyCode === 13){ 
+                    addItem() }
+            })
+            addBtn.addEventListener('click', addItem)   
+        </script>
+    </div>
+</body></html>

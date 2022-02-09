@@ -1,0 +1,273 @@
+.image { 
+    float: left;
+    -webkit-mask-image:linear-gradient(to right, black, transparent) ;
+    mask-image: linear-gradient(to right, black, transparent);
+    width: 50%;
+    margin-left: 0;
+    
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+.farmly{
+    background-image: linear-gradient(to left,brown, white ) ;
+    float: left;
+    width: 50%;
+    height: 100%;  
+}
+.farmly h1 {
+    font-family: 'Sofia';
+    text-align: center;
+    margin-top: 10px;
+    font-size: 100px;
+}
+    
+      /*navbar*/
+.navbar{
+    margin-left: 10px;
+    margin-top: 5%;
+    list-style-type: none;
+    display: flex;
+}
+.navbar li{
+    height: 25px;
+    display: block;
+    color: white;
+    text-align: center;
+    width: 220px;
+    padding: 17px 0px;
+    text-decoration: none;
+    background-color: black;
+}
+.farmly .rgo{
+    padding: 15px 0 19px 0;
+}
+.farmly li:hover:not(.active){
+    background-color: dimgray;
+}
+.farmly .active{
+    background-color: brown;
+}
+    /*bills*/
+#bills {
+    margin-top: 30px;
+    margin-left: 10px;
+}
+table:not(#todo-list){
+    width: 98%;
+}
+table{
+    clear: both;
+    border-collapse: collapse;
+    border: black;
+}
+th{
+    background-color: grey;
+    color: white;
+    padding: 5px;
+}
+tr{
+    background-color: lightgrey;
+}
+td{
+    padding: 5px;
+    text-align: center;
+}
+   /*reportshop*/
+
+#reportshop{
+    display: none;
+}
+input[type="submit"]{
+    margin-left: 200px; 
+    margin-top: 17px; 
+    width: 200px; height: 30px; 
+    padding: 5px; 
+    border-radius: 10px; 
+    font-size: medium; 
+    font-weight: 600; 
+    cursor: pointer; 
+    border: 2px solid brown; 
+    background-color: rgb(202, 154, 154); 
+}
+#reportshop{
+    margin-top: 15px;
+    margin-left: 25px;
+}
+#reportshop label{   
+    margin-top: 5px;
+    margin-left: 17%;
+}
+#reportshop input:not(#submit) ,textarea{   
+    width: 300px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    margin-left: 20%;
+    padding: 5px; 
+}
+#reportshop textarea{
+    margin-left: 20%;
+}
+   /*rating*/
+#rating{
+    display: none;
+    margin-top: 30px;
+    margin-left: 10%;
+}
+#rating label{
+    padding:30px 90px;
+}
+#rating input:not(#submit) ,textarea{
+    margin-left: 15%;
+}
+   /*Shopkeeper*/
+.shopkeeper input{
+    float: left;
+    padding: 5px;
+    margin-top: 10%;
+}
+
+
+#sno{
+    width: 44px;   
+    margin-left: 15%;  
+}
+#itemname{   
+    width: 170px;
+}
+#qty{
+    width:55px;
+}
+#rate{
+    width:102px;
+}
+#add-item{
+    margin-top: 10%;
+    margin-left: 4px;
+    float: left;
+    padding: 5px;
+}
+#update-item{
+    float: left;
+    padding: 5px;
+    margin-left: 4px;
+}
+.table{
+    padding-top: 18%;
+    margin-left: 20%;
+}
+i {
+    float: right;
+    padding-right: 5px;
+    color: grey;
+}
+i:hover{
+    color: black;
+}
+/*govtoff*/
+#govtoff table{
+    margin-top: 30px;
+}
+#govtoff span{
+    font-size: larger;
+    color: black;
+}
+#govtoff tr:hover:not(#nothover){
+    background-color: darkgray;
+}
+#bills tr:hover:not(#nothover tr){
+    background-color: darkgray;
+}
+@media (max-width: 991px){
+    .image{
+        display: none;
+    }
+    .farmly { 
+        background-image: url(Bgimage2.jpg);
+        float: left;
+        width: 100%;
+        height: 100%;
+        margin-left: 0;
+      }
+      .farmly h1 {
+        font-family: 'Sofia';
+        text-align: center;
+        margin-top: 10px;
+        font-size: 50px;
+        color: beige;
+    }
+    /*farmer*//*bills*//*report*/
+    .navbar{
+        margin-left: 10px;
+        margin-top: 5%;
+        list-style-type: none;
+        display: flex;
+        margin-right: 10px;
+    }
+    .navbar li{
+        height: 25px;
+        display: block;
+        color: white;
+        text-align: center;
+        width: 200px;
+        padding: 17px 0px;
+        text-decoration: none;
+        background-color: black;
+        font-size: 20px;
+    }
+    .farmly .rgo{
+        text-align:center;
+       font-size: 14px;
+    }
+    #reportshop{
+        margin-left: 0;
+    }
+    input[type="submit"]{
+        margin-left: 140px; 
+    }
+    /*rating*/
+    #rating{
+        display: none;
+        margin-top: 30px;
+        margin-left: 5%;
+    }
+    /*shopkeeper*/
+    .shopkeeper input{
+        float: left;
+        padding: 5px;
+        margin-top: 10%;
+        }
+    #sno{
+        width: 44px;   
+       margin-left: 35px;
+    }
+    #itemname{   
+        width: 150px;
+    }
+    #qty{
+        width:55px;
+    }
+    #rate{
+        width:90px;
+    }
+    #add-item{
+        margin-top:10%;
+     
+        margin-bottom: 8%;
+        
+       
+    }
+    .table{
+       padding: 9px;
+        margin-left: 35px;
+       
+    }
+    /*govt off*/
+    
+    #govtoff table{
+        margin-top: 50px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+}
