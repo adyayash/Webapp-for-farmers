@@ -1,0 +1,138 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <div class="bluebg">
+            <div class="box signin">
+                <h2>Already a member of Farmly ?</h2>
+                <button class="signinbtn">Sign In</button>
+            </div>
+            <div class="box signup">
+                <h2>Not a member of Farmly</h2>
+                <button class="signupbtn">Sign Up</button>
+            </div>
+        </div>
+        <div class="formbx">
+            <div class="form signinform" style="margin-top: 30px;">
+                <form>
+                    <h3>Sign In</h3>
+                    <input type="text" placeholder="Username">
+                    <input type="password" placeholder="Password">
+                    <div id="class_3" class="green">
+                        <p> Type of User :
+                            <input type="radio" name="radio"> Farmer <br>
+                            <input type="radio" name="radio" id="radio"> Shopkeeper <br>
+                            <input type="radio" name="radio" id="radio"> Government Official
+                            </p> </div>
+                    <input type="button" id="login" value="Login">
+                    <a href="#" class="forgot">Forgot Password</a>
+                </form>
+            </div>
+            <div ></div>
+            <div class="form signupform">
+                <form>
+                    <h3>Sign Up</h3>
+                    <input type="text" placeholder="Username">
+                    <input type="email" placeholder="Email id">
+                    <input type="password" placeholder="Password">
+                    <div id="class_4" class="brown">
+                        <p id="types_of_user"> Type of User :
+                            <input type="radio" name="radio"> Farmer<br>
+                            <input type="radio" name="radio" id="radio"> Shopkeeper <br>
+                            <input type="radio" name="radio" id="radio"> Government Official
+                            </p>
+                            <div id="farmer-details" class="details">
+                                <p><input type="text" name="name" placeholder="Name"></p>
+                                <p><textarea id="ta" name="address" cols="38" rows="6" placeholder="Address"></textarea>  
+                                <p><input type="number" placeholder="Mobile Number"></p>
+                                <p><input type="number" name="areasize" placeholder="Area of Farmland"></p>
+                                <p><textarea  id="ta" name="type" placeholder="Type of Cultivation" cols="38" rows="6"></textarea>
+                                 <p  > Identity proof of the Farmer:<br>
+                                        <input type="file" id="file" name="proof of farmer"></p>
+                                <p >Identity card of Farmer :<br>
+                                    <input type="file" id="file" name="Id Card of farmer"></p></div>
+                            <div id="shopkeeper-details" class="details">
+                                    <p><input type="text" name="name" placeholder="Name"></p>
+                                    <p><input type="number" name="phonenumber" placeholder="Mobile Number"></p>
+                                    <p><input type="name" name="shopname" placeholder="Shopname"></p>
+                                    <p><textarea  id="ta" name="address"   cols="38" rows="6" placeholder="Shop Address"></textarea>  
+                                    <p >Proof of Shop Establishment :<br>
+                                    <input type="file" id="file" name="proof of shop"></p> 
+                                    <p > Identity Proof of the Owner:<br>
+                                    <input type="file" id="file" name="proof of owner"></p>
+                                    <p >Signature of the Owner:<br>
+                                        <input type="file" id="file" name="signature of owner"></p></div>
+                            <div id="govtoff-details" class="details">
+                                    <p><input type="text" name="name" placeholder="Name"></p>
+                                    <p><input type="number" name="phonenumber" placeholder="Mobile Number"></p>
+                                    <p><input type="text " name="designation" placeholder="Designation"></p>
+                                    <p><input type="number" name="idnum" placeholder="ID num"></p>
+                                    <p><textarea  id="ta" type="text" name="office address"  placeholder="Office Address" cols="38" rows="6"></textarea></p>
+                                    <p > Identity proof of the Officer :<br>
+                                        <input type="file" id="file" name="proof of officer"></p>
+                                    <p >Signature of the Officer :<br>
+                                        <input type="file" id="file" name="signature of officer"></p> </div>
+                    </div>
+                    <input type="submit" value="Register">
+                </form>
+            </div>
+        </div>
+    </div>
+<script>var class3 = document.getElementById("class_3")
+    var input2 = class3.getElementsByTagName('input')
+    var login = document.getElementById('login')
+    input2[0].addEventListener('click',function(){
+        login.addEventListener('click',function(){
+            window.open('Farmer.html','_self')
+        })
+    })
+    input2[1].addEventListener('click',function(){
+        login.addEventListener('click',function(){
+            window.open('shopkeeper.html','_self')
+        })
+    })
+    input2[2].addEventListener('click',function(){
+        login.addEventListener('click',function(){
+            window.open('govtoff.html','_self')
+        })
+    })
+    var class4 = document.getElementById("class_4")
+    var farmerDetails = document.getElementById('farmer-details')
+    var shopkeeperDetails = document.getElementById('shopkeeper-details')
+    var govtoffDetails = document.getElementById('govtoff-details')
+    var input1 = class4.getElementsByTagName('input');
+    input1[0].addEventListener('click', function(){
+        farmerDetails.style.display='block'
+        shopkeeperDetails.style.display='none'
+        govtoffDetails.style.display = 'none'
+    })
+    input1[1].addEventListener('click', function(){
+        farmerDetails.style.display='none'
+        shopkeeperDetails.style.display='block'
+        govtoffDetails.style.display = 'none'
+    })
+    input1[2].addEventListener('click', function(){
+        farmerDetails.style.display='none'
+        shopkeeperDetails.style.display='none'
+        govtoffDetails.style.display = 'block'
+    })
+    const signinBtn = document.querySelector('.signinbtn')
+    const signupBtn = document.querySelector('.signupbtn')
+    const formBx = document.querySelector('.formbx')
+    const body = document.querySelector('body')
+    signupBtn.addEventListener('click', function(){
+        formBx.classList.add('active')
+        formBx.style.overflowY="scroll"
+        body.classList.add('active')
+    })
+    signinBtn.addEventListener('click', function(){
+        formBx.classList.remove('active')
+        body.classList.remove('active')
+        formBx.style.overflow="hidden"
+    })</script>
+</body>
+</html>
