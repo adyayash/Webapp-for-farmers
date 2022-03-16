@@ -1,3 +1,3 @@
 # Farmers app
-web to connect farmers directly with government official
+web app to connect farmers directly with government official
 
